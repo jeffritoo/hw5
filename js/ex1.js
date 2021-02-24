@@ -25,3 +25,5 @@ class square{
 let mySquare = new square(6);
 
 console.log(mySquare.area());
+
+/* NaN error*/

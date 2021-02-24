@@ -1,46 +1,76 @@
 console.log("Jeffry's Output from Tutorial 4 Example 3");
 
-const movieList = [
+const students = [
     {
-      title: "Batman",
-      year: 1989,
-      director: "Tim Burton",
-      imdbRating: 7.6
+        firstName: "Allan",
+        lastName: "Able",
+        scores: [95, 85, 92, 98]
     },
     {
-      title: "Batman Returns",
-      year: 1992,
-      director: "Tim Burton",
-      imdbRating: 7.0
+        firstName: "Amy",
+        lastName: "Alexander",
+        scores: [80, 88, 100]
     },
     {
-      title: "Batman Forever",
-      year: 1995,
-      director: "Joel Schumacher",
-      imdbRating: 5.4
+        firstName: "Betty",
+        lastName: "Barns",
+        scores: [70, 80, 90, 100]
     },
     {
-      title: "Batman & Robin",
-      year: 1997,
-      director: "Joel Schumacher",
-      imdbRating: 3.7
+        firstName: "Bob",
+        lastName: "Bones",
+        scores: [75, 85, 95, 85]
     },
     {
-      title: "Batman Begins",
-      year: 2005,
-      director: "Christopher Nolan",
-      imdbRating: 8.3
+        firstName: "Cindy",
+        lastName: "Chase",
+        scores: [95, 90, 92, 98]
     },
     {
-      title: "The Dark Knight",
-      year: 2008,
-      director: "Christopher Nolan",
-      imdbRating: 9.0
+        firstName: "Charles",
+        lastName: "Chips",
+        scores: [88, 99, 90]
     },
-    {
-      title: "The Dark Knight Rises",
-      year: 2012,
-      director: "Christopher Nolan",
-      imdbRating: 8.5
+];
+
+const studentsResults = [];
+for (const student of students) {
+    let gradesSum = 0;
+
+    for (const score of student.scores){
+      gradesSum += score;
     }
-  ];
+    const averageGrade = gradesSum / student.scores.length;
+
+
+    studentsResults.push({
+      firstname: student.firstName,
+      lastname: student.lastName,
+      /*max: maximum,
+      min: minnimum,*/
+      avgGrade: averageGrade
+    });
+}
+
+
+/*
+const studList = [];
+
+for (const student of studentList){
+    let gradeSum=0;
+
+    for(const score of studentList.scores){
+        gradeSum += score;
+    }
+
+    const averageGrade = gradeSum/studentList.scores.length;
+
+    studentList.push({
+        firstname: studentList.firstName,
+        lastname: studentList.lastName,
+        avgScore: averageGrade
+
+    });
+}
+*/
+console.log(studentsResults);
